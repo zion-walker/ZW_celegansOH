@@ -9,6 +9,14 @@ library(viridis)
 setwd("~/ZW_OHlab/fall2021/ZW_celegansOH")
 
 # Load in data set
+pumping_data_2021 <- read_csv("pharyngeal_pumping_data.csv")
+# Statistics
+median(pumping_data_2021$`Adlt_daf-2;daf-16::AID_ppm`)
+pumping_data_2021 <- na.omit(pumping_data_2021)
+median(pumping_data_2021$`dauer_daf-2;daf-16::AID_ppm`)
+median(pumping_data_2021$`dauer_daf-2_ppm`)
+
+# create a new data frame
 pumping_data <- read_csv("Book2.csv")
 
 #boxplot
